@@ -42,8 +42,8 @@ fetchData()
     return (
         <div className='pt-16 container mx-auto bg-blue-900'>
         <div className='container mx-auto'>
-        <h2 className='text-white font-semibold md:text-4xl text-xl pb-5 pt-9 text-center capitalize'>Popular {params.explore} Shows</h2>
-        <div className='grid grid-cols-[repeat(auto-fit,250px)] gap-5 justify-center'>
+        <h2 className='text-white font-semibold md:text-4xl text-xl pb-5 pt-9 text-center capitalize'>Popular{params.explore === 'tv'? " Tv Shows":" Movies"}</h2>
+        <div className='grid lg:grid-cols-[repeat(auto-fit,250px)] grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-5 place-items-center justify-center '>
             {
                 data.map((exploreData,index)=>{
                     return(

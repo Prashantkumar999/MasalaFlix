@@ -1,8 +1,6 @@
 import React from 'react';
 import HomeBanner from '../components/HomeBanner';
 import { useSelector } from 'react-redux';
-import axios from 'axios'
-import { useState, useEffect } from 'react';
 import HoriScrollCard from '../components/HoriScrollCard';
 import useFetch from '../hooks/useFetch';
 
@@ -25,12 +23,11 @@ const Home = () => {
       <HoriScrollCard data={nowPlaying} heading={"Now Playing"} media_type={"movie"} />
       <HoriScrollCard data={popularMovies} heading={"Popular Movies"} media_type={"movie"}/>
       <HoriScrollCard data={topRatedMovies} heading={"Top Rated Movies"}media_type={"movie"} />
-
       <HoriScrollCard data={upcomingMovies} heading={"Upcoming Movies"}media_type={"movie"}/>
-      <HoriScrollCard data={onTheAir} heading={"On The Air"}media_type={"tv"}/>
-      <HoriScrollCard data={airingToday} heading={"Airing Today"}media_type={"tv"}/>
       <HoriScrollCard data={popularTvShows} heading={"Popular Tv Shows"}media_type={"tv"}/>
       <HoriScrollCard data={topRatedTvShows} heading={"Top Rated Tv Shows"}media_type={"tv"}/>
+      <HoriScrollCard data={onTheAir} heading={"On The Air"}media_type={"tv"}/>
+      <HoriScrollCard data={airingToday} heading={"Airing Today"}media_type={"tv"}/>
             
         </div>
     );

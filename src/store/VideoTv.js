@@ -1,6 +1,4 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { BiExport } from "react-icons/bi";
-
 
 const initialState = {
     bannerData: [],

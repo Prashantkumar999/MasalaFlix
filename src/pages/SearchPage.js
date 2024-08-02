@@ -41,6 +41,7 @@ const SearchPage = () => {
             fetchData();
         }
     }, [pageNo]);
+    console.log(location)
 
     useEffect(() => {
         window.addEventListener('scroll', handleScroll)
@@ -53,8 +54,8 @@ const SearchPage = () => {
                 } value={query.split("%20")?.join(" ")} ></input>
             </div>
             <div className='container mx-auto'>
-                <h2 className='text-white font-semibold md:text-4xl text-xl py-4 text-center'>Search Results</h2>
-                <div className='grid grid-cols-[repeat(auto-fit,250px)] gap-5 justify-center'>
+                <h2 className='text-white font-semibold md:text-4xl text-xl py-4 text-center'>Search Results For {location?.search?.slice(3).split("%20")?.join(" ")}</h2>
+                <div className='grid lg:grid-cols-[repeat(auto-fit,250px)] grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-5 place-items-center justify-center'>
                     {data.map((searchData) => (
                         <Card
                             key={searchData.id + "search" + searchData.name}

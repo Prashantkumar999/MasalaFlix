@@ -3,8 +3,7 @@ import { Link, NavLink, useLocation, useNavigate } from 'react-router-dom';
 import { FaUserCircle } from "react-icons/fa";
 import { IoIosSearch } from "react-icons/io";
 
-
-import logo from '../Images/logo.png'
+import logo from '../Images/masalaFlixLogo.svg'
 import './Style.css'
 import { navigation } from '../Constants/navigation';
 
@@ -28,14 +27,14 @@ const Header = () => {
   }
   return (
     <header className='flex gap-5 items-center bg-slate-800 sm:h-20 h-16 fixed w-full opacity-90 z-30'>
-      <Link to={"/"}>
-        <img className='sm:w-[250px] w-[170px]' src={logo} />
+      <Link to={"/"} className=''>
+        <img className=' -ml-9 lg:ml-0 pt-4 object-cover w-[300px]' src={logo} />
       </Link>
 
-      <nav className='flex gap-4'>
+      <nav className='flex gap-4 lg:-ml-10'>
         {navigation.map((nav, index) => (
-          <div key={index} className='text-white hidden lg:block'>
-            <NavLink key={index} to={nav.href} className={({ isActive }) => `px-2 hover:text-slate-400 ${isActive && " text-blue-400"}`}>
+          <div key={index} className='px-2 text-white hidden lg:block'>
+            <NavLink key={index} to={nav.href} className={({ isActive }) => ` hover:text-slate-400 ${isActive && " text-blue-400"}`}>
               {nav.name}
             </NavLink>
           </div>
