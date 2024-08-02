@@ -21,7 +21,7 @@ const Card = ({ data, trending, index,media_type }) => {
             <div className='bg-gradient-to-t from-blue-800 absolute left-0 right-0 bottom-0 top-0  opacity-50'>
 
             </div>
-            <div className='absolute -bottom-14 -right-3 '>
+            <div className='absolute -bottom-16 -right-9 '>
                 <img src={logo} width={150} />
             </div>
         </Link>
